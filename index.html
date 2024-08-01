@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printing Business</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.3/build/spline-viewer.js"></script>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <spline-viewer url="https://prod.spline.design/8dMzDT2pZ2PC8hEU/scene.splinecode"></spline-viewer>
+        <div class="hero-content">
+            <h1>AFS 3D</h1>
+            <p>Your ideas into a reality</p>
+            <a href="#services" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <img src="/images/1services.png" alt="Custom 3D Printing">
+            <h3>Custom 3D Printing</h3>
+            <p>High-quality custom 3D printing services tailored to your needs.</p>
+        </div>
+        <div class="service">
+            <img src="/images/2services.png" alt="3D Modeling and Design">
+            <h3>3D Modeling and Design</h3>
+            <p>Professional 3D modeling and design services to bring your ideas to life.</p>
+        </div>
+        <div class="service">
+            <img src="/images/3services.png" alt="Prototyping">
+            <h3>Prototyping</h3>
+            <p>Rapid prototyping services to test and refine your designs.</p>
+        </div>
+    </section>
+
+    <!--About Us-->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Our Story</h3>
+                <p>We are a passionate team dedicated to transforming your ideas into reality through innovative 3D printing technology. Since our founding, we have been committed to providing high-quality and customized 3D printing services to clients from various industries.</p>
+                <h3>Our Mission</h3>
+                <p>Our mission is to deliver exceptional 3D printing solutions that exceed our clients' expectations, empowering them to innovate and create with confidence.</p>
+            </div>
+            <div class="about-team">
+                <h3>Meet the Team</h3>
+                <div class="team-member">
+                    <img src="/images/alonso.png" alt="Team Member 1">
+                    <p>Alonso Beltrán Esquerra - CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="/images/mau.jpeg" alt="Team Member 2">
+                    <p>Mauricio Quintainlla - Lead Designer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+ <!-- Portfolio Section -->
+ <section id="portfolio" class="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="/images/1.png" alt="Project 1">
+            <h3>Project Title 1</h3>
+            <p>Description of the project goes here. It can highlight the materials used, the purpose of the project, and any special features.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="/images/2.png" alt="Project 2">
+            <h3>Project Title 2</h3>
+            <p>Description of the project goes here. It can highlight the materials used, the purpose of the project, and any special features.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="/images/3.png" alt="Project 3">
+            <h3>Project Title 3</h3>
+            <p>Description of the project goes here. It can highlight the materials used, the purpose of the project, and any special features.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="/images/5.png" alt="Project 4">
+            <h3>Project Title 4</h3>
+            <p>Description of the project goes here. It can highlight the materials used, the purpose of the project, and any special features.</p>
+        </div>
+    </div>
+</section>
+        <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>If you have any questions or would like to start a project, feel free to reach out to us.</p>
+                <ul>
+                    <li><strong>Address:</strong> 123 3D Printing Lane, Innovation City</li>
+                    <li><strong>Phone:</strong> (123) 456-7890</li>
+                    <li><strong>Email:</strong> info@3dprintingbusiness.com</li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <h3>Contact Form</h3>
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+     
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: e.target.name.value,
+                email: e.target.email.value,
+                message: e.target.message.value
+            };
+    
+            try {
+                const response = await fetch('http://localhost:3000/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+    
+                if (response.ok) {
+                    alert('Email sent successfully!');
+                } else {
+                    alert('Failed to send email.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error sending email.');
+            }
+        });
+    </script>
+</body>
+</html>
