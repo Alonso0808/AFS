@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #121212; /* Dark background color */
+    background-color: #000000; /* Dark background color */
     color: rgb(0, 0, 0); /* Secondary color for text */
 }
 
@@ -76,8 +76,8 @@ spline-viewer {
 
 .service {
     display: inline-block;
-    width: 30%;
-    margin: 5px;
+    width: 20%;
+    margin: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Lighter shadow */
     border-radius: 10px;
@@ -161,7 +161,7 @@ spline-viewer {
 /* Portfolio Section */
 .portfolio {
     padding: 50px;
-    background-color: #1e1e1e; /* Slightly lighter dark background */
+    background-color: #000000; /* Slightly lighter dark background */
     text-align: center;
 }
 
@@ -202,7 +202,7 @@ spline-viewer {
 /* Contact Section */
 .contact {
     padding: 50px;
-    background-color:#ccc; /* Slightly lighter dark background */
+    background-color:#fcfcfc; /* Slightly lighter dark background */
     text-align: center;
 }
 
