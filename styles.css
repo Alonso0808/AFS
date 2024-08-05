@@ -33,13 +33,14 @@ a {
 }
 
 .hero h1 {
-    font-size: 7em;
+    font-size: 6.5em;
     margin: 0;
 }
 
 .hero p {
     color: #000000;
-    font-size: 1.5em;
+    font-size: 1.4em;
+    margin-top: 0%;
 }
 
 .cta-button {
@@ -71,12 +72,13 @@ spline-viewer {
 .services h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #ccc;
+    color: #ffffff;
 }
 
 .service {
     display: inline-block;
-    width: 20%;
+    width: 25%;
+    height: 80%;
     margin: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Lighter shadow */
@@ -102,7 +104,7 @@ spline-viewer {
 }
 /* About Us Section */
 .about {
-    padding: 50px;
+    padding: 20px;
     background-color:   #ffffff; /* Slightly lighter dark background */
     text-align: center;
 }
@@ -189,7 +191,7 @@ spline-viewer {
 }
 
 .portfolio-item h3 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin: 10px 0;
     color: #ffffff;
 }
@@ -201,7 +203,8 @@ spline-viewer {
 
 /* Contact Section */
 .contact {
-    padding: 50px;
+    background-image: url(/);
+    padding: 10px;
     background-color:#fcfcfc; /* Slightly lighter dark background */
     text-align: center;
 }
